@@ -1,13 +1,14 @@
 //import libraries
 import React, {Component} from 'react';
-import {Text, ScrollView, View, Image} from 'react-native';
+import {Text, ScrollView, View, Image, Linking} from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
 //prop
+import Button from './Button';
 
 const AlbumDetail = ({album}) =>{
 
-    const {title, artist, thumbnail_image, image} = album;
+    const {title, artist, thumbnail_image, image,url} = album;
     const {thumbnailStyle, 
         headerContentStyle,
         headerTextStyle,
@@ -29,6 +30,11 @@ const AlbumDetail = ({album}) =>{
             </CardSection>
                 <CardSection>
                  <Image style={imageStyle}  source={{uri:image}} />
+                </CardSection>
+
+                <CardSection>
+                      <Button onPress={()=> Linking.openURL(url)} >
+                          </Button>
                 </CardSection>
         </Card>
     );
@@ -60,8 +66,6 @@ const styles= {
         width:null
 
     }
-
-
 };
 
 export default AlbumDetail;

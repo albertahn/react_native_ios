@@ -1,30 +1,39 @@
 //import libraries
 import React, {Component} from 'react';
-import {Text,View, ScrollView} from 'react-native';
+import {Text,View, TouchableOpacity} from 'react-native';
 
 //prop
 
-const Button = () =>{
+const Button = ({ onPress }) =>{
+
+    const {buttonStyle, textStyle} = styles;
+
     return (
-        <Text>Click </Text>
+        <TouchableOpacity onPress={onPress} style={buttonStyle}>
+            <Text style={textStyle}>Click </Text>
+        </TouchableOpacity>
     );
 
 };
 
 const styles= {
-    containerStyle:{
+    buttonStyle:{
+        flex: 1,
+        alignSelf:'stretch',
+        backgroundColor: '#fff',
+        borderRadius: 5,
         borderWidth:1,
-        borderRadius:2,
-        borderColor:'#ddd',
-        borderBottomWidth:0,
-        shadowColor: '#000',
-        shadowOffset: {width:0, height:2},
-        shadowOpacity:0.1,
-        shadowRadius:2,
-        elevation: 1,
-        marginLeft :5,
+        borderColor: '#007aff',
+        marginLeft:5,
         marginRight:5,
-        marginTop:10
+        paddingTop:10,
+        paddingBottom:10
+    },
+    textStyle:{
+        alignSelf: 'center',
+        color:'#007aff',
+        fontSize: 16,
+        fontWeight:'600'
     }
 
 };
