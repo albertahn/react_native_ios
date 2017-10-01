@@ -5,13 +5,17 @@
 
 ///import lib to create a component 
 import React from 'react';
-import {Text, AppRegistry} from 'react-native';
+import {Text, AppRegistry, View} from 'react-native';
 import Header from './src/components/header';
+import AlbumList from './src/components/AlbumList';
 
 //create components https://babeljs.io/repl/ 
 
 const App = () =>(
-<Header/>
+      <View>
+        <Header headerText={'I am a godo'} />
+        <AlbumList/>
+       </View>
   );
 
 
