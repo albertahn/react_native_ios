@@ -1,4 +1,19 @@
 //import libraries
 import React, {Component} from 'react';
-import {Text,View, ScrollView} from 'react-native';
+import {Text, ScrollView} from 'react-native';
+import Card from './Card';
+import CardSection from './CardSection';
+//prop
 
+const AlbumDetail = (props) =>{
+    return (
+        <Card>
+            <CardSection>
+            <Text>{props.album.title}</Text>
+            </CardSection>
+        </Card>
+    );
+
+};
+
+export default AlbumDetail;
