@@ -2,20 +2,28 @@
 
 //import libraries
 import React from 'react';
-import {Text} from 'react-native';
+import {Text,View} from 'react-native';
 //make components
 
 const Header = ()=>{
-    const {textStyle} = styles;
-    return <Text style={textStyle}> fuck all of my Albums!</Text>;
+    const {textStyle, viewStyle} = styles;
+return (
+
+    <View style={viewStyle}>
+        <Text style={textStyle}> eAlbums!</Text>
+    </View>
+
+);
 
 };
 
 const styles ={
+    viewStyle:{
+        backgroundColor:'#F80000'
+    },
  
-    textStyle:{
-        fontSize: 40
-
+    textStyle: {
+        fontSize: 50
     } //text
 
 };
