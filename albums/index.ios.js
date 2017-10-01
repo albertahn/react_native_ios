@@ -12,7 +12,7 @@ import AlbumList from './src/components/AlbumList';
 //create components https://babeljs.io/repl/ 
 
 const App = () =>(
-      <View>
+      <View style={{flex: 1}}>
         <Header headerText={'I am a godo'} />
         <AlbumList/>
        </View>

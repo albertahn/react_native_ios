@@ -32,7 +32,7 @@ const styles ={
     },
  
     textStyle: {
-        fontSize: 50
+        fontSize: 20
     } //text
 
 };
